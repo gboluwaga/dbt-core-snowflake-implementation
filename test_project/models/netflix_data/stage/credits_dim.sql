@@ -1,9 +1,3 @@
-{{ config(
-    materialized = 'table'
-    
-    )}}
-
-
 select *
-from dbt_database.dbt_raw.credits
+from {{var('credit')}}
 where role in ('ACTOR', 'DIRECTOR')
