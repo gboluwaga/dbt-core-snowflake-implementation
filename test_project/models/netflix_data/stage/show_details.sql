@@ -1,9 +1,6 @@
-
-/*{{ config(
+{{ config(
     materialized = 'table'
-    
-    )}}*/
-
+)}}
 
 select 
 id,
