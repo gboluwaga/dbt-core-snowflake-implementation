@@ -32,5 +32,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   test_project:
     # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+      netflix_data:
+            stage:
+                +materialized: table
+vars:
+    titles: 'dbt_database.dbt_raw.titles'
+    credit: 'dbt_database.dbt_raw.credits'
