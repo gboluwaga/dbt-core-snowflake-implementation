@@ -1,8 +1,8 @@
 
-{{ config(
+/*{{ config(
     materialized = 'table'
     
-    )}}
+    )}}*/
 
 
 select 
