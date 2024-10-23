@@ -1,7 +1,3 @@
-{{ config(
-    materialized = 'table'
-)}}
-
 select 
 id,
 title,
@@ -14,4 +10,4 @@ genres,
 production_countries,
 seasons
 from
-dbt_database.dbt_raw.titles
+{{var('titles')}}
