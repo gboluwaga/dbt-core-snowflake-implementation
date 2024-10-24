@@ -10,4 +10,4 @@ genres,
 production_countries,
 seasons
 from
-{{sources('netflix_data','titles')}}
+{{  source('netflix_data','titles')  }}
