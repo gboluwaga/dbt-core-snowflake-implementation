@@ -1,2 +1,10 @@
-netflix_data:
-  
+version: 2
+
+
+sources:
+  - name:netflix_data
+    database:DBT_DATABASE
+    schema:dbt_raw
+    tables:
+      -name:titles
+      -name:credits 
