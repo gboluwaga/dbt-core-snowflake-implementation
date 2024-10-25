@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: netflix_data
+    database: DBT_DATABASE
+    schema: DBT_RAW
+    tables:
+      - name: titles
+      - name: credits
