@@ -9,6 +9,6 @@ with actors as (
     where name in ('Sylvester Stallone','Stephen Bishop')
 )
 
-select role,name, person_id, count(*)
+select role,name, person_id, count(*) role_count
 from actors
-group by 1,2,3
+group by role,name, person_id
