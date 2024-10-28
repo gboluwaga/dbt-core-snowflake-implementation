@@ -5,7 +5,7 @@ with votes as (
     coalesce(imdb_votes,0) imdb_votes,
     coalesce(tmdb_popularity,0) tmdb_popularity,
     coalesce(tmdb_score,0) tmdb_score
-    from {{soure('netflix_data','score_votes')}}
+    from {{source('netflix_data_transform','score_votes')}}
 )
 
 select 
@@ -14,6 +14,6 @@ select
     description,
     release_year,
     v.*
-    from {{soure('netflix_data','show_details')}} a 
+    from {{source('netflix_data_transform','show_details')}} a 
     left join votes v 
-    on a.id = votes.id
+    on a.id = v.id

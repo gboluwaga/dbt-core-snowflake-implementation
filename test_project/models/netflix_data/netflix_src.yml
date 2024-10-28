@@ -7,3 +7,11 @@ sources:
     tables:
       - name: titles
       - name: credits
+
+  - name: netflix_data_transform          # Another source (different schema)
+    database: DBT_DATABASE  # Same or a different database
+    schema: DBT_TRANSFORM        # Replace with the schema name
+    tables:
+      - name: show_details               # Table in the another_schema
+      - name: score_votes
+      - name: credits_dim    
