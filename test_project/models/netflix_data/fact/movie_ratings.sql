@@ -16,4 +16,5 @@ select
     COUNT(*) RATING_COUNT
     from ratings
     where release_year between 1998 and 2002 
+    and type <> 'SHOW'
     group by 1,2
