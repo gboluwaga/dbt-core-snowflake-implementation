@@ -35,6 +35,8 @@ models:
       netflix_data:
             stage:
                 +materialized: table
+            fact:
+              +materialized: table
 vars:
     titles: 'dbt_database.dbt_raw.titles'
     credit: 'dbt_database.dbt_raw.credits'
