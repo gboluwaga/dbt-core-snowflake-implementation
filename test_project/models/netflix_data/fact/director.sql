@@ -11,4 +11,5 @@ with directors as (
 
 select character,name, count(*) character_count
 from directors
+where character is not null or ''
 group by character,name
