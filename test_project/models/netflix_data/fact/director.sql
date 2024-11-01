@@ -9,7 +9,6 @@ with directors as (
     where role = 'DIRECTOR'
 )
 
-select character,name, count(*) character_count
+select name, count(*) character_count
 from directors
-where character is not null or ''
-group by character,name
+group by name
