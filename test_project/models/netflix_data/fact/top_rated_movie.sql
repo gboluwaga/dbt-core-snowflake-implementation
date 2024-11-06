@@ -4,7 +4,6 @@ with top_rated (
 )
 
 select 
-    title,
     type,
     release_year,
     count(*) cnt_per_year
