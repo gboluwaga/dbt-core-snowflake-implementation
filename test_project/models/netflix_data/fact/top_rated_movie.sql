@@ -1,12 +1,12 @@
 with top_rated (
     select *
-    from {{source('netflix_data_transform','popularity_dim')}} a 
+    from {{source('netflix_data_transform','popularity_dim')}}
 )
 
 select 
     title,
     type,
-    year,
+    release_year,
     count(*) cnt_per_year
     from top_rated
     where type = 'MOVIE'
