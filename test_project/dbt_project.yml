@@ -35,8 +35,12 @@ models:
       netflix_data:
             stage:
                 +materialized: table
+                +schema: dbt_transform
             fact:
               +materialized: table
-vars:
-    titles: 'dbt_database.dbt_raw.titles'
-    credit: 'dbt_database.dbt_raw.credits'
+              +schema: dbt_transform
+
+seeds:
+  test_project:
+    +database: dbt_database
+
