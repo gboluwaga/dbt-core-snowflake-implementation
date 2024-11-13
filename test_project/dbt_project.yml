@@ -44,4 +44,3 @@ vars:
 seeds:
   test_project:
     schema: dbt_raw
-    database: dbt_database
